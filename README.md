@@ -10,7 +10,7 @@ This PowerShell implementation provides dynamic column type detection and data v
 - Limits output width with smart string truncation
 - Saves output to both console and file
 
-## Example Input CSV ([`default.csv`]default.csv)):
+## Example Input CSV ([`default.csv`](default.csv)):
 ```csv
 1,Welcome to dynamic-csv-headers.ps1 Welcome to csv_console_table.ps1,10.00
 2,This is a sample data csv file,19.97
