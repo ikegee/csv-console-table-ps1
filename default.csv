@@ -1,0 +1,9 @@
+1,"Welcome to dynamic-csv-headers.ps1 Welcome to csv_console_table.ps1",10.00,asdf321654,1,true
+2,"This is a sample data csv file",19.97,321654AE,2,false
+3,"1st row: set header types",1.99,"null",3,true
+4,"This file headers: 'int *char float *char'",11.99,Can't feel Nothing!,4,true
+5,"Unknown types become `*char/string`",19.97,OU812,5,true
+6,"'gcc -o xyz .\csv_processor.c -lm'",19.17,"string",6,true
+7,"'.\csv_console_table.ps1'",19.84,"*char",7 ,false
+8,"'python -m grip README.md'",16.89,"*char",8,false
+9,"'.\csv_console_table.ps1' yourfile.csv ",19.97,"*char",9,false
