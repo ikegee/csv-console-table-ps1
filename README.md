@@ -26,10 +26,10 @@ This PowerShell implementation provides dynamic column type detection and data v
 
 ## Usage
 - **PowerShell**:
-   - .\csv_console_table.ps1 .\yourfile.csv (optonal)
+   - .\csv_console_table.ps1 .\yourfile.csv (optional)
 
 - **BASH**:
-   - pwsh csv_console_table.ps1 yourfile.csv (optonal)
+   - pwsh csv_console_table.ps1 yourfile.csv (optional)
 
 ## Parameters
  - DefaultFile: Path to CSV file (default: "default.csv")
