@@ -12,13 +12,15 @@ This PowerShell implementation provides dynamic column type detection and data v
 
 ## Example Input CSV ([`default.csv`]default.csv)):
 ```csv
-1,"Welcome to csv-console-table-ps1",9.98,UNKOWN,1,true
-2,"This is a sample data csv file",19.97,321654AE,2,false
-3,"1st row: set header types",1.99,"null",3,true
-4,"Detect headers: 'int *char float *char int bool'",11.99,NULL,4,true
-5,"Unknown types become `*char/string`",19.97,OU812,5,true
-6,"'gcc -o xyz .\csv_console_table.c'",19.17,"string",6,true
-7,"'.\xyz .\yourfile.csv'",19.84,"*char",7,false
+1,Welcome to dynamic-csv-headers.ps1 Welcome to csv_console_table.ps1,10.00
+2,This is a sample data csv file,19.97
+3,1st row: set header types,1.99
+4,This file headers: 'int *char float *char',11.99
+5,Unknown types become `*char/string`,19.97
+6,'gcc -o xyz .\csv_processor.c -lm',19.17
+7,'.\csv_console_table.ps1',19.84
+8,'python -m grip README.md',16.89
+9,'.\csv_console_table.ps1' yourfile.csv ,19.97
 ```
 
 ## Example Output 
