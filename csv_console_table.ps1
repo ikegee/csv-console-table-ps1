@@ -10,11 +10,16 @@
     Author: G.E. Eidsness 
 #>
 
-[CmdletBinding()]
 param(
     [string]$DefaultFile = "default.csv",
     [ValidateRange(1,1000)][int]$rowLimit = 10
 )
+
+# Check if PowerShell version is 7.0 or higher
+if ($PSVersionTable.PSVersion.Major -lt 7) {
+    Write-Host "This script requires PowerShell 7.0 or higher."
+    exit 1
+}
 
 # Define column types enum
 enum ColumnType {
