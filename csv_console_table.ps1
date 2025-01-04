@@ -7,7 +7,7 @@
 .EXAMPLE
     .\csv_console_table.ps1 .\filename.csv
 .NOTES
-    Author: G.E. Eidsness 
+    Author: /* (c) 2025 G.E. Eidsness */
 #>
 
 param(
