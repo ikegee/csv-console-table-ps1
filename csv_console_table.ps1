@@ -171,6 +171,12 @@ function TruncateString($str, $maxLength) {
 try {
     $inputFile = ($args.Count -gt 0) ? $args[0] : $DefaultFile 
     
+    # Add CSV extension validation
+    if (-not ($inputFile -match '\.csv$')) {
+        Write-Error "Input file must have a .csv extension"
+        exit 4
+    }    
+    
     # Add file existence check
     if (-not (Test-Path $inputFile)) {
         Write-Error "CSV file '$inputFile' does not exist."
