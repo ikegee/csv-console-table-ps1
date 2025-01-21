@@ -15,6 +15,9 @@ param(
     [ValidateRange(1,1000)][int]$rowLimit = 10
 )
 
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+
 # Check if PowerShell version is 7.0 or higher
 if ($PSVersionTable.PSVersion.Major -lt 7) {
     Write-Host "This script requires PowerShell 7.0 or higher."
