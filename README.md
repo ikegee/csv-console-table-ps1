@@ -46,7 +46,6 @@ This PowerShell implementation provides dynamic column type detection and data v
    - Null (empty or null values)
 
 ## Limitations
-- The script assumes the first row contains column headers.
 - Duplicate column names are not supported.
 - The output width is limited to 120 characters.
 
