@@ -3,24 +3,24 @@ This PowerShell implementation provides dynamic column type detection and data v
 
 ## Features
 - Dynamically detects and validates column types from CSV data
-- Supports multiple data types: Int, Float, Bool, String, and Null
+- Supports multiple data types: Int, Float, Double, Bool, String, and Null
 - Creates formatted console tables with proper alignment
 - Validates subsequent rows against the detected schema
 - Handles duplicate column names with automatic suffixes
 - Limits output width with smart string truncation
 - Saves output to both console and file
 
-## Example Input CSV ([`default.csv`](default.csv)):
+## Example Input CSV ([`default.csv`]default.csv)):
 ```csv
-1,Welcome to dynamic-csv-headers.ps1 Welcome to csv_console_table.ps1,10.00
-2,This is a sample data csv file,19.97
-3,1st row: set header types,1.99
-4,This file headers: 'int *char float *char',11.99
-5,Unknown types become `*char/string`,19.97
-6,'gcc -o xyz .\csv_processor.c -lm',19.17
-7,'.\csv_console_table.ps1',19.84
-8,'python -m grip README.md',16.89
-9,'.\csv_console_table.ps1' yourfile.csv ,19.97
+1,"Welcome to dynamic-csv-headers.ps1 Welcome to csv_console_table.ps1",10.00,asdf321654,1,true,3.141592653590
+2,"This is a sample data csv file",19.97,321654AE,2,false,2.718281828460
+3,"1st row: set header types",1.99,"null",3,true,1.414213562370
+4,"This file headers: 'int char* float char* int bool double'",11.99,Can't feel Nothing!,4,true,6.022140760000
+5,"Unknown types become `char*/string`",19.97,OU812,5,true,9.806650000000
+6,"'gcc -o xyz .\csv_processor.c -lm'",19.17,"string",6,true,1.602176634000
+7,"'.\csv_console_table.ps1'",19.84,"char*",7 ,false,6.674300000000
+8,"'python -m grip README.md'",16.89,"char*",8,false,2.997924580000
+9,"'.\csv_console_table.ps1' yourfile.csv ",19.97,"char*",9,false,1.618033988750
 ```
 
 ## Example Output 
@@ -40,12 +40,14 @@ This PowerShell implementation provides dynamic column type detection and data v
 ## Data Type Detection
 - The script automatically detects these column types:
    - Int (whole numbers)
-   - Float (decimal numbers)
+   - Float (decimals with at most 2 digits after the decimal point)
+   - Double (more than 2 digits after the decimal point, an exponent such as `1.5e-3`, or a trailing `d`/`D` suffix such as `1.25d`). Printed with 6 decimal places (`3.141593`). Exponent literals print in scientific notation (`1.500000e-03`)
    - Bool (true/false)
    - String (text)
    - Null (empty or null values)
 
 ## Limitations
+- The script assumes the first row contains column headers.
 - Duplicate column names are not supported.
 - The output width is limited to 120 characters.
 
