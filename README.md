@@ -68,7 +68,7 @@ This PowerShell implementation provides dynamic column type detection and data v
    - Import-Csv "data.csv" | Format-Table
 
 - **BASH**:
-   - csvcut -c 1,2,3 default.csv
+   - csvlook -H ./data/generic.csv
 
 ## License
  - This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
